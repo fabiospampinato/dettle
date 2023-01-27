@@ -1,0 +1,28 @@
+{
+  "name": "dettle",
+  "repository": "github:fabiospampinato/dettle",
+  "description": "A tiny fully-featured debounce and throttle implementation.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
+    "prepublishOnly": "npm run clean && npm run compile && npm run test"
+  },
+  "keywords": [
+    "tiny",
+    "debounce",
+    "throttle"
+  ],
+  "devDependencies": {
+    "fava": "^0.0.7",
+    "tsex": "^1.1.4",
+    "typescript": "^4.9.4"
+  }
+}
