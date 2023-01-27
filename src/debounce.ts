@@ -10,6 +10,8 @@ const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number 
 
   /* VARIABLES */
 
+  wait = Math.max ( 1, wait );
+
   const leading = options?.leading ?? false;
   const trailing = options?.trailing ?? true;
   const maxWait = Math.max ( options?.maxWait ?? Infinity, wait );

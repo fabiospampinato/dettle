@@ -31,6 +31,20 @@ describe ( 'Dettle', () => {
 
     });
 
+    it ( 'works with a 0 delay', async t => {
+
+      let count = 0;
+      let fn = () => count++;
+      let dfn = debounce ( fn, 0 );
+
+      dfn ();
+
+      await delay ( 1 );
+
+      t.is ( count, 1 );
+
+    });
+
   });
 
   describe ( 'throttle', it => {
@@ -52,6 +66,20 @@ describe ( 'Dettle', () => {
       await delay ( 500 );
 
       t.true ( count > 10 );
+
+    });
+
+    it ( 'works with a 0 delay', async t => {
+
+      let count = 0;
+      let fn = () => count++;
+      let tfn = throttle ( fn, 0 );
+
+      tfn ();
+
+      await delay ( 1 );
+
+      t.is ( count, 1 );
 
     });
 
