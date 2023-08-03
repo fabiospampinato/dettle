@@ -40,7 +40,6 @@ throttled (); // Schedule function for execution
 
 throttled.flush (); // Execute the function immediately, if there's a scheduled execution
 throttled.cancel (); // Cancel the scheduled execution
-
 ```
 
 ## License

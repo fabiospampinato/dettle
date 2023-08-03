@@ -1,7 +1,6 @@
 
 /* IMPORT */
 
-import now from './now';
 import type {FN, Debounced} from './types';
 
 /* MAIN */
@@ -25,7 +24,7 @@ const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number 
 
   const getInstantData = (): [number, boolean] => {
 
-    const timestamp = now ();
+    const timestamp = Date.now ();
     const elapsedCall = timestamp - timestampCall;
     const elapsedInvoke = timestamp - timestampInvoke;
     const isInvoke = ( elapsedCall >= wait || elapsedInvoke >= maxWait );
@@ -60,7 +59,7 @@ const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number 
 
     onCancel ();
 
-    invoke ( now () );
+    invoke ( Date.now () );
 
   };
 
