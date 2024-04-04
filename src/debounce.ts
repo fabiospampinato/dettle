@@ -1,11 +1,11 @@
 
 /* IMPORT */
 
-import type {FN, Debounced} from './types';
+import type {FN, DebounceOptions, Debounced} from './types';
 
 /* MAIN */
 
-const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number = 1, options?: { leading?: boolean, trailing?: boolean, maxWait?: number } ): Debounced<Args> => {
+const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number = 1, options?: DebounceOptions ): Debounced<Args> => {
 
   /* VARIABLES */
 

@@ -2,11 +2,11 @@
 /* IMPORT */
 
 import debounce from './debounce';
-import type {FN, Throttled} from './types';
+import type {FN, ThrottleOptions, Throttled} from './types';
 
 /* MAIN */
 
-const throttle = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number = 1, options?: { leading?: boolean, trailing?: boolean } ): Throttled<Args> => {
+const throttle = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number = 1, options?: ThrottleOptions ): Throttled<Args> => {
 
   return debounce ( fn, wait, {
     maxWait: wait,
