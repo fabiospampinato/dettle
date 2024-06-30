@@ -39,7 +39,7 @@ describe ( 'Dettle', () => {
 
       dfn ();
 
-      await delay ( 1 );
+      await delay ( 5 );
 
       t.is ( count, 1 );
 
@@ -77,7 +77,7 @@ describe ( 'Dettle', () => {
 
       tfn ();
 
-      await delay ( 1 );
+      await delay ( 5 );
 
       t.is ( count, 1 );
 
