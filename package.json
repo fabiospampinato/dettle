@@ -21,7 +21,7 @@
     "throttle"
   ],
   "devDependencies": {
-    "fava": "^0.3.2",
+    "fava": "^0.3.4",
     "tsex": "^4.0.2",
     "typescript": "^5.5.2"
   }

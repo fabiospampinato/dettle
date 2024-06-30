@@ -2,7 +2,6 @@
 /* IMPORT */
 
 import {describe} from 'fava';
-import {setTimeout as delay} from 'node:timers/promises';
 import {debounce, throttle} from '../dist/index.js';
 
 /* MAIN */
@@ -21,11 +20,11 @@ describe ( 'Dettle', () => {
 
         dfn ();
 
-        await delay ( 1 );
+        await t.wait ( 1 );
 
       }
 
-      await delay ( 500 );
+      await t.wait ( 500 );
 
       t.is ( count, 1 );
 
@@ -39,7 +38,7 @@ describe ( 'Dettle', () => {
 
       dfn ();
 
-      await delay ( 5 );
+      await t.wait ( 5 );
 
       t.is ( count, 1 );
 
@@ -59,11 +58,11 @@ describe ( 'Dettle', () => {
 
         tfn ();
 
-        await delay ( 1 );
+        await t.wait ( 1 );
 
       }
 
-      await delay ( 500 );
+      await t.wait ( 500 );
 
       t.true ( count > 10 );
 
@@ -77,7 +76,7 @@ describe ( 'Dettle', () => {
 
       tfn ();
 
-      await delay ( 5 );
+      await t.wait ( 5 );
 
       t.is ( count, 1 );
 
