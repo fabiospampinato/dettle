@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/dettle",
   "description": "A tiny fully-featured debounce and throttle implementation.",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
