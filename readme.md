@@ -5,7 +5,7 @@ A tiny fully-featured debounce and throttle implementation.
 ## Install
 
 ```sh
-npm install --save dettle
+npm install dettle
 ```
 
 ## Usage
