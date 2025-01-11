@@ -2,6 +2,7 @@
   "name": "dettle",
   "repository": "github:fabiospampinato/dettle",
   "description": "A tiny fully-featured debounce and throttle implementation.",
+  "license": "MIT",
   "version": "1.0.4",
   "type": "module",
   "main": "dist/index.js",
@@ -23,6 +24,6 @@
   "devDependencies": {
     "fava": "^0.3.4",
     "tsex": "^4.0.2",
-    "typescript": "^5.5.2"
+    "typescript": "^5.7.3"
   }
 }
