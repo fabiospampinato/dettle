@@ -16,7 +16,7 @@ const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number 
   const maxWait = Math.max ( options?.maxWait ?? Infinity, wait );
 
   let args: Args | undefined;
-  let timeout: ReturnType<typeof setTimeout> | undefined;
+  let timeout: number | undefined;
   let timestampCall = 0;
   let timestampInvoke = 0;
 
@@ -109,7 +109,7 @@ const debounce = <Args extends unknown[]> ( fn: FN<Args, unknown>, wait: number 
 
     if ( ms <= 0 ) return;
 
-    timeout = setTimeout ( onTimeout, ms );
+    timeout = +setTimeout ( onTimeout, ms );
 
   };
 
